@@ -25,7 +25,7 @@ SECRET_KEY = '%_k019#+@4)cxa5rm&$+k--nhmcw1f53sfi4h6dlxxj#u3olx4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -38,8 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'leads',
-    'rest_framework'
+    'leads',            # 添加 leads app
+    'rest_framework',   # 添加 rest framework
+    'xadmin',           # 添加 xadmin
+    'crispy_forms',     # 添加 xadmin
 ]
 
 MIDDLEWARE = [
