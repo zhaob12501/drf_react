@@ -23,5 +23,5 @@ urlpatterns = [
     path('', include('leads.urls')),
     path('api/', include('api.urls')),
     path('account/', xadmin.site.urls),
-    path('api/docs/', include_docs_urls(title='Lead 在线API文档', description=API_DESCRIPTION)),  # new
+    path('api/docs/', include_docs_urls(title='在线API文档', description=API_DESCRIPTION)),  # new
 ]

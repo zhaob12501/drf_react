@@ -10,8 +10,8 @@ class GoodsAdmin:
     list_filter: 后台过滤器可使用的字段
     """
 
-    list_display = ("name", "number", "price")
-    search_fields = ("name", "number", "price")
-    list_filter = ("name", "number", "price", "update_date")
+    list_display = ("name", "number", "price", "update_date")
+    search_fields = ("name", "number", "price", "update_date")
+    list_filter = ("name", "number", "price", "create_date", "update_date")
 
 xadmin.site.register(models.Goods, GoodsAdmin)

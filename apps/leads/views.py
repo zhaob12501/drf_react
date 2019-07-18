@@ -14,7 +14,13 @@ class LeadListCreate(generics.ListCreateAPIView):
     post:
         创建一个新的 Lead 实例
     """
-    queryset = Lead.objects.all()
+    queryset = Lead.objects.filter(is_delete=False).all()
     serializer_class = LeadSerializer
     # 必须自定义 schema
+    schema = AutoSchema()
+
+
+class LeadUpdate(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Lead.objects.filter(is_delete=False).all()
+    serializer_class = LeadSerializer
     schema = AutoSchema()
