@@ -1,3 +1,4 @@
 dbs
 .vscode
 __pycache__
+migrations
